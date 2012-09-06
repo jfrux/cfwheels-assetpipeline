@@ -6,11 +6,11 @@
 
 <h1>Installation</h1>
 <p>
-	For installation instructions,<br>
-	visit http://github.com/joshuairl/cfwheels-assetpipeline
+	Follow the installation instructions:<br>
+	<a href="http://github.com/joshuairl/cfwheels-assetpipeline">http://github.com/joshuairl/cfwheels-assetpipeline</a>
 </p>
 
-<p>This plugin will override existing functionality within the Wheels core API and add a ruby libraries called Rake and Sprockets.</p>
+<p>This plugin will override existing functionality within the Wheels core API and add ruby libraries called Rake and Sprockets.</p>
 
 <pre>
 ... in /events/onApplicationStart.cfm
@@ -35,14 +35,14 @@
 			<li><strong>sources</strong> - a list of stylesheet files that you would like included on the page.</li>
 			<li><strong>type</strong> - The type of file. Defaults to <code>application.wheels.styleSheetLinkTag.type</code>.</li>
 			<li><strong>media</strong> - The media type to apply the CSS to. Defaults to <code>application.wheels.styleSheetLinkTag.media</code></li>
-			<li><strong>bundle</strong> - the name of the bundled file to use in testing and production. If the bundle is specified, you should not need to list any sources.</li>
+			<li><strong>debug</strong> - (default: false) While in debug mode, pipeline will add a single script tag for each asset dependency found within the root file.</li>
 		</ul>
 	</li>
 	<li>javaScriptIncludeTag</li>
 		<ul>
 			<li><strong>sources</strong> - a list of stylesheet files that you would like included on the page.</li>
 			<li><strong>type</strong> - The type of file. Defaults to <code>application.wheels.javaScriptIncludeTag.type</code>.</li>
-			<li><strong>bundle</strong> - the name of the bundled file to use in testing and production. If the bundle is specified, you should not need to list any sources.</li>
+			<li><strong>debug</strong> - (default: false) While in debug mode, pipeline will add a single script tag for each asset dependency found within the root file.</li>
 		</ul>
 </ul>
 

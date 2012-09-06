@@ -4,7 +4,10 @@
 		<cfscript>
 			this.version = "1.1.5";
 			application.assets = [];
+
+			$directoryCopy(source="templates/",destination="../../",nameConflict="skip");
 		</cfscript>
+
 		<cfreturn this />
 	</cffunction>
 	
@@ -76,7 +79,7 @@
 			<cfif contents.type eq "file">
 				<cffile action="copy" source="#arguments.source#/#name#" destination="#arguments.destination#/#name#" nameconflict="#arguments.nameConflict#">
 			<cfelseif contents.type eq "dir">
-				<cfset directoryCopy(arguments.source & "/" & name, arguments.destination & "/" &  name) />
+				<cfset $directoryCopy(arguments.source & "/" & name, arguments.destination & "/" &  name) />
 			</cfif>
 		</cfloop>
 	</cffunction>
