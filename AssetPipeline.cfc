@@ -77,7 +77,9 @@
 		
 		<cfloop query="contents">
 			<cfif contents.type eq "file">
-				<cffile action="copy" source="#arguments.source#/#name#" destination="#arguments.destination#/#name#" nameconflict="#arguments.nameConflict#">
+				<cfif NOT fileExists("#arguments.destination#/#name#")>
+					<cffile action="copy" source="#arguments.source#/#name#" destination="#arguments.destination#/#name#" nameconflict="#arguments.nameConflict#">
+				</cfif>
 			<cfelseif contents.type eq "dir">
 				<cfset $directoryCopy(arguments.source & "/" & name, arguments.destination & "/" &  name) />
 			</cfif>
