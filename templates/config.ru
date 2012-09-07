@@ -1,12 +1,12 @@
-require 'sprockets'
-require 'coffee_script'
+pluginPath = File.dirname(__FILE__) + "/plugins/AssetPipeline/"
+require pluginPath + "wheels.rb"
+require pluginPath + "sprockets.rb"
+require "coffee_script"
+require "less"
+require "sprockets"
+
+sprockets = Sprockets.env
+
 map '/assets' do
-  environment = Sprockets::Environment.new
-  environment.append_path 'app/assets/javascripts'
-  environment.append_path 'app/assets/stylesheets'
-  environment.append_path 'vendor/assets/javascripts'
-  environment.append_path 'vendor/assets/stylesheets'
-  environment.append_path 'lib/assets/javascripts'
-  environment.append_path 'lib/assets/stylesheets'
-  run environment
+  run sprockets
 end
