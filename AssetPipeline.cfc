@@ -6,9 +6,11 @@
 			application.assets = {};
 			application.assets['js'] = [];
 			application.assets['css'] = [];
+			application.wheels.assetHost = "localhost";
+			application.wheels.assetPort = "3000";
 			application.wheels.assetPaths = {
-				http = "#application.wheels.assetsHost#:#application.wheels.assetsPort#/assets",
-				https = "#application.wheels.assetsHost#:#application.wheels.assetsPort#/assets"
+				http = "#application.wheels.assetHost#:#application.wheels.assetPort#/assets",
+				https = "#application.wheels.assetHost#:#application.wheels.assetPort#/assets"
 			};
 			application.wheels.javascriptPath = "";
 			application.wheels.stylesheetPath = "";
